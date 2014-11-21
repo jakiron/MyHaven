@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.1.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>MyHaven</title>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/ajaxSet.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.1.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="home" data-theme="b">
+            <div data-role="header"><h1 style="text-align:left;margin-left:1%">MyHaven</h1></div>
+            <div role="main" class="ui-content">
+                <div id="panicBtn_holder">
+                <form>
+                    <div>
+                    <a href="#popup" class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-left" data-rel="dialog" data-transition="pop" style="padding:10%">Send panic alert</a>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" id="popup">
+            <div role="main" class="ui-content">
+                <div class="ui-content">
+                    <h1>Send Panic Alert?</h1>
+                    <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-btn-b" id="sendPanic">Ok</button>
+                    <a href="#home" data-rel="back" class="ui-btn ui-corner-all ui-btn-b" data-theme="b">Cancel</a>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            myhaven.initialize();
+        </script>
+    </body>
+</html>
